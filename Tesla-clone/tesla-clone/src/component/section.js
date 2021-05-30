@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function Section(props) {
     return (
-        <Container >
+        <Container bg={props.backgroundImg}>
             <ItemText>
                 <h1>{props.title}</h1>
                 <p>{props.description}</p>
@@ -25,7 +25,7 @@ export default Section
 const Container = styled.div`
 width: 100%;
 height: 100vh;
-background-image: url('/images/model-x.jpg');
+background-image: url('/images/${props => props.bg}');
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
